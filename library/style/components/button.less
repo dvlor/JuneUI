@@ -1,0 +1,86 @@
+@import "../variables";
+.j-button{
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: @font-size;
+  line-height: 1em;
+  cursor: pointer;
+  border: solid 1px #eee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  user-select: none;
+  vertical-align: middle;
+  transition: all .1s ease;
+
+  // 类型
+  &.j-button-default{
+    transition: all .2s;
+    &:hover{
+      color: @color-primary;
+      border-color: @color-primary;
+    }
+  }
+
+  &.j-button-primary{
+    background-color: @color-primary;
+    border-color: @color-primary;
+    color: #fff;
+    &:active{
+      box-shadow: 0 0 8px 0 @color-primary;
+    }
+  }
+
+  &.j-button-text{
+    border: 0;
+    &:hover{
+      background-color: #f1f1f1;
+    }
+  }
+
+  &.j-button-link{
+    border: none;
+    color: @color-primary;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  // 尺寸
+  &.j-button-mini {
+    font-size: @font-size-small;
+    padding: 4px 12px;
+  }
+
+  &.j-button-large {
+    font-size: @font-size-large;
+    padding: 8px 20px;
+  }
+
+//  形状
+  &.j-button-circle{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    line-height: 20px;
+    text-align: center;
+    &.j-button-mini{
+      width: 14px;
+      height: 14px;
+      line-height: 16px;
+    }
+    &.j-button-large{
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+    }
+  }
+
+  &.j-button-rectangle{
+    border-radius: 0;
+  }
+}
+
+.j-button + .j-button{
+  margin-left: @space-mini;
+}

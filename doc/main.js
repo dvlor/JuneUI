@@ -5,8 +5,10 @@ import router from './router';
 import JuneUI from '../library';
 import '../library/style/index.less';
 
-Vue.config.productionTip = false;
+import document from './components/document.vue';
 
+Vue.config.productionTip = false;
+Vue.component('doc', document);
 Vue.use(JuneUI);
 
 new Vue({
